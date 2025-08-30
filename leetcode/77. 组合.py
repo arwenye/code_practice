@@ -1,3 +1,4 @@
+from typing import List
 class Solution:
     def combine1(self, n: int, k: int) -> List[List[int]]:
         '''回溯的方法'''
@@ -29,9 +30,7 @@ class Solution:
                 dfs(idx+1)
                 path.pop()
                 #巧妙的分叉，选择或者不选当前这个数
-                dfs(idx+1)
-
-            
+                dfs(idx+1) 
             return
             
         dfs(1)
